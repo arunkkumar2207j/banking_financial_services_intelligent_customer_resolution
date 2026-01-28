@@ -1,0 +1,59 @@
+#research_task:
+#  description: >
+#    Conduct a thorough research about {topic}
+#    Make sure you find any interesting and relevant information given
+#    the current year is {current_year}.
+#  expected_output: >
+#    A list with 10 bullet points of the most relevant information about {topic}
+#  agent: researcher
+#
+#reporting_task:
+#  description: >
+#    Review the context you got and expand each topic into a full section for a report.
+#    Make sure the report is detailed and contains any and all relevant information.
+#  expected_output: >
+#    A fully fledged report with the main topics, each with a full section of information.
+#    Formatted as markdown without '```'
+#  agent: reporting_analyst
+
+intent_task:
+  description: >
+    Classify customer message into transaction, card, fraud, loan, or general enquiry.
+  expected_output: >
+    Intent label with confidence score.
+  agent: intent_agent
+
+risk_task:
+  description: >
+    Analyze intent and determine risk level and need for escalation.
+  expected_output: >
+    Risk level (Low/Medium/High) and escalate flag.
+  agent: risk_agent
+
+knowledge_task:
+  description: >
+    Retrieve relevant banking policies, FAQs and rules for the detected intent.
+  expected_output: >
+    Verified policy facts and response guidelines.
+  agent: knowledge_agent
+
+resolution_task:
+  description: >
+    Decide safe operational steps such as refund process. card block, or ticket creation.
+  expected_output: >
+    Action plan or workflow steps.
+  agent: resolution_agent
+
+communication_task:
+  description: >
+    Generate final customer facing response in polite and compliant language.
+  expected_output: >
+    Clear, empathetic response message.
+  agent: communication_agent
+
+escalation_task:
+  description: >
+    Prepare structured case summary for human review if risk is high.
+  expected_output: >
+    Escalate report with issue, risk and recommended action.
+  agent: escalation_agent
