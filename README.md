@@ -1,4 +1,6 @@
-# Banking & Financial Services – Intelligent Customer Resolution (Multi-Agent System)
+# BankingFinancialServicesIntelligentCustomerResolution Crew
+
+Welcome to the BankingFinancialServicesIntelligentCustomerResolution Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
 
 This project implements an **Agentic AI system using CrewAI** to intelligently handle customer issues in the Banking & Financial Services domain.  
 The system simulates how a real bank resolves customer problems such as:
@@ -29,72 +31,68 @@ Intent → Risk → Knowledge → Resolution → Communication → Escalation
 
 ---
 
+
 ## 📁 Project Structure
 
 ```
-week_12_graded_mini_project/
+banking_financial_services_intelligent_customer_resolution/
 └── src/
-    └── week_12_graded_mini_project/
+    └── banking_financial_services_intelligent_customer_resolution/
         ├── main.py
         ├── crew.py
-        ├── agents/
         ├── tools/
-        ├── prompts/
-        ├── memory/
         ├── config/
-        └── orchastrator/
 ```
 
 ---
 
-## ⚙️ Installation
+## Installation
 
-### Python Version
-Use **Python 3.11.x** (CrewAI is not fully compatible with Python 3.13 on Windows).
+Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
 
-### Create Virtual Environment
-```bash
-py -3.11 -m venv venv
-venv\Scripts\activate
-```
-
-### Install Dependencies
-```bash
-pip install crewai[tools]==1.8.1 python-dotenv
-```
-
-### Configure API Key
-Create `.env` file in project root:
-
-```
-OPENAI_API_KEY=your_api_key_here
-OPENAI_MODEL_NAME=gpt-4o-mini
-```
-
----
-
-## ▶️ Running the Project
+First, if you haven't already, install uv:
 
 ```bash
-set PYTHONPATH=src
-python src/week_12_graded_mini_project/main.py
+pip install uv
 ```
 
----
+Next, navigate to your project directory and install the dependencies:
 
-## 🎓 Academic Value
+(Optional) Lock the dependencies and install them by using the CLI command:
+```bash
+crewai install
+```
+### Customizing
 
-This project demonstrates:
+**Add your `OPENAI_API_KEY` into the `.env` file**
 
-- Multi-Agent AI architecture  
-- Agentic workflow orchestration  
-- Banking domain risk & compliance modeling  
-- Human-in-the-loop escalation  
-- Prompt modularization  
-- Real-world BFSI use case implementation
+- Modify `src/banking_financial_services_intelligent_customer_resolution/config/agents.yaml` to define your agents
+- Modify `src/banking_financial_services_intelligent_customer_resolution/config/tasks.yaml` to define your tasks
+- Modify `src/banking_financial_services_intelligent_customer_resolution/crew.py` to add your own logic, tools and specific args
+- Modify `src/banking_financial_services_intelligent_customer_resolution/main.py` to add custom inputs for your agents and tasks
 
----
+## Running the Project
 
-## 📌 Viva One-Liner
+To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
 
-> “This system models a real banking customer support center using multiple specialized AI agents orchestrated by CrewAI, ensuring safe, compliant, and accurate customer resolution.”
+```bash
+$ crewai run
+```
+
+This command initializes the banking-financial-services-intelligent-customer-resolution Crew, assembling the agents and assigning them tasks as defined in your configuration.
+
+This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+
+## Understanding Your Crew
+
+The banking-financial-services-intelligent-customer-resolution Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+
+## Support
+
+For support, questions, or feedback regarding the BankingFinancialServicesIntelligentCustomerResolution Crew or crewAI.
+- Visit our [documentation](https://docs.crewai.com)
+- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
+- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
+- [Chat with our docs](https://chatg.pt/DWjSBZn)
+
+Let's create wonders together with the power and simplicity of crewAI.
